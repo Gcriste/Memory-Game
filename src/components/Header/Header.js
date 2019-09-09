@@ -3,10 +3,10 @@ import "./style.css";
 
 import React from 'react'
 
-function Header() {
-    return (
-        
-    )
-}
-
-export default Header;
+const Header = props => (
+    <div className="header">
+      <div className="title">{props.children}</div>
+      </div>
+  );
+  
+  export default Header;
