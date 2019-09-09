@@ -1,6 +1,6 @@
 .pics{
     background: #fff;
-    border-radius: 15px;
+    border-radius: 25px;
     height: 250px;
     margin: 1rem;
     position: relative;
@@ -9,6 +9,9 @@
     text-align: left;
   }
   
+  .pics:hover{
+      opacity:0.8;
+  }
   .pics> .img-container {
     height: 100%;
     overflow: hidden;

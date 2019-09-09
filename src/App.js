@@ -5,7 +5,7 @@ import images from "./images.json";
 import Main from "./components/Main/Main"
 import Score from "./components/Score/Score"
 import Wrapper from "./components/Wrapper/Wrapper";
-import Header from "./components/Header/Header";
+import Footer from "./components/Footer/Footer"
 
 class App extends Component {
   // Setting this.state.pups to the cards json array
@@ -67,7 +67,6 @@ class App extends Component {
                status={this.state.status}
                highscore={this.state.highScore}
                />
-        <Header> </Header>
         {this.state.images.map(image => (
            <Main
            shuffleCards ={this.shuffleCards}
@@ -77,7 +76,9 @@ class App extends Component {
            image={image.image}
          />
         ))}
+          <Footer> copyright @Gcriste 2019</Footer>
       </Wrapper>
+    
     );
   }
 }

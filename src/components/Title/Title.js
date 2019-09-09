@@ -3,8 +3,11 @@ import "./style.css";
 
 function Title(props) {
     return (
-        <h1 className="title">{props.children}</h1>   
-    )
+        <div>
+        <h1 className="title">{props.children}</h1>  
+        <h3 className = "directions"> Click on each image once. If you click on the same image twice, you lose!</h3> 
+        </div>
+   )
 }
 
 export default Title
