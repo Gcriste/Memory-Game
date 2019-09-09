@@ -10,19 +10,4 @@ const Main = props => (
     </div>
   );
 
-
-// function Main(props) {
-//     return (
-//         <div className="content">
-//             <div className = "container">
-//                 <div className = "row">
-//                  <strong>Name:</strong> {props.name}
-//                     <img className = "pics img-fluid" alt={props.name} src={props.image} />
-
-//                 </div>
-//             </div>
-//         </div>
-//     )
-// }
-
 export default Main;
