@@ -78,6 +78,7 @@ class App extends Component {
         ))}
           <Footer> copyright @Gcriste 2019</Footer>
       </Wrapper>
+      
     
     );
   }

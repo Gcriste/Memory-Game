@@ -1,4 +1,11 @@
 .score, .highscore{
     font-family: 'Gayathri', sans-serif;
     font-size:34px;
+    
+}
+
+.gameScore{
+    border:5px solid black;
+    border-radius:5px;
+    padding:5px;
 }
