@@ -27,7 +27,7 @@ class App extends Component {
       this.setState({ clickedImages: [], 
         score: this.state.score, 
         highScore:this.state.score,
-        status:  "Game Over! You clicked the same image twice!" });
+        status:  "Game Over! You clicked the same image twice! Click on an image or refresh the page to play again." });
         if (this.state.score > this.state.highScore ) {
           this.setState({
             highScore: this.state.score
