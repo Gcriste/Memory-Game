@@ -8,7 +8,7 @@ import Wrapper from "./components/Wrapper/Wrapper";
 import Footer from "./components/Footer/Footer"
 
 class App extends Component {
-  // Setting this.state.images to the cards json array
+  // Setting this.state.images to the images json array
   state = {
     images,
     clickedImages: [],
@@ -28,7 +28,9 @@ class App extends Component {
         clickedImages: [], 
         score: this.state.score, 
         highScore:this.state.score,
-        status:  "Game Over! You clicked the same image twice! Click on an image or refresh the page to play again." });
+        status:  "Game Over! You clicked the same image twice! Click on an image or refresh the page to play again." 
+      });
+        console.log("You lose")
         if (this.state.score > this.state.highScore ) {
           this.setState({
             highScore: this.state.score
@@ -46,9 +48,11 @@ class App extends Component {
       clickedImages.push(id)
 
       if(clickedImages.length === 15){
-        this.setState({score: 15, 
+        this.setState({
+          score: 15, 
           status: "You Won!", 
-          clickedImages: []});
+          clickedImages: []
+        });
         console.log('You Win');
         return;
       }
@@ -58,7 +62,8 @@ class App extends Component {
         clickedImages, 
         highScore: this.state.highScore,
         score: clickedImages.length, 
-        status: " " });
+        status: " " 
+      });
 
       for (let i = images.length - 1; i > 0; i--) {
         let j = Math.floor(Math.random() * (i + 1));

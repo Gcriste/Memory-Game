@@ -13,17 +13,17 @@
       opacity:0.8;
       cursor:pointer;
   }
-  .pics> .img-container {
+  .img-container {
     height: 100%;
     overflow: hidden;
     text-align: center;
     background:#6CADDC;
   }
-  .pics> .img-container > img {
+    img {
     width: 100%
   }
   
-  .pics > .content {
+  .content {
     padding-left: 1rem;
     padding-right: 1rem;
     font-size: 15px;
