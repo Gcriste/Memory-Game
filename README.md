@@ -1,3 +1,10 @@
+# Clicky Memory Game
+
+Try to click on every image once. If you click on the same image twice you lose!
+
+You can go to a deployed live link at https://dry-journey-39353.herokuapp.com/ 
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
