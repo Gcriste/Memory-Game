@@ -8,7 +8,7 @@ import Wrapper from "./components/Wrapper/Wrapper";
 import Footer from "./components/Footer/Footer"
 
 class App extends Component {
-  // Setting this.state.pups to the cards json array
+  // Setting this.state.images to the cards json array
   state = {
     images,
     clickedImages: [],
@@ -18,13 +18,14 @@ class App extends Component {
     status: ""
   };
 
-  //shuffle the pup cards in the browser when clicked
+  //shuffle the cards in the browser when clicked
   shuffleCards = id => {
     let clickedImages = this.state.clickedImages;
    
 
     if(clickedImages.includes(id)){
-      this.setState({ clickedImages: [], 
+      this.setState({ 
+        clickedImages: [], 
         score: this.state.score, 
         highScore:this.state.score,
         status:  "Game Over! You clicked the same image twice! Click on an image or refresh the page to play again." });
@@ -33,18 +34,27 @@ class App extends Component {
             highScore: this.state.score
           });
         }
+          else{
+            this.setState({
+              highScore:this.state.highScore
+            })
+          }
+        
      
       return;
     }else{
       clickedImages.push(id)
 
       if(clickedImages.length === 15){
-        this.setState({score: 15, status: "You Won!", clickedImages: []});
+        this.setState({score: 15, 
+          status: "You Won!", 
+          clickedImages: []});
         console.log('You Win');
         return;
       }
 
-      this.setState({ images, 
+      this.setState({ 
+        images, 
         clickedImages, 
         highScore: this.state.highScore,
         score: clickedImages.length, 
@@ -57,7 +67,7 @@ class App extends Component {
     }
   }
 
-  // Map over this.state.images and render a cardCard component for each image object
+  // Map over this.state.images and render a card component for each image object
   render() {
     return (
       <Wrapper>
